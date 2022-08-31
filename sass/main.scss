@@ -1,0 +1,19 @@
+@import './base/reset';
+@import './base/global'; 
+
+@import './utils/variables';
+@import './utils/hidden';
+@import './utils/mixin';
+
+@import './components/header';
+@import './components/hero';
+@import './components/benefits';
+@import './components/about';
+@import './components/team';
+@import './components/clients';
+@import './components/footer';
+@import './components/modal';
+@import './components/portfolio/portfolio-card';
+@import './components/portfolio/portfolio-filter';
+
+
