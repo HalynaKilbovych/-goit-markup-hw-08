@@ -3,7 +3,7 @@
   max-width: 1600px;
   margin: 0 auto;
   background-color: #2f303a;
-  background-image: var(--bg-gradient), url(./images/hero-bg-mob.jpg);
+  background-image: var(--bg-gradient), url(../images/hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -32,6 +32,9 @@
       text-align: center;
       text-transform: uppercase;
       color: var(--secondary-header-color);
+      @media screen and (max-width: 480px) {
+        font-size: 22px;
+      }
       @include desktop {
         max-width: 696px;
         @include fonts(900, 44px, 60px, 0.06em);

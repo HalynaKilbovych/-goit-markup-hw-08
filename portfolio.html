@@ -81,12 +81,35 @@
             <li class="card-list__item link">
               <a href="#" target="_blank" rel="noopener noreferrer nofollow" class="card-list__link link">
                 <div class="card-list__content">
-                  <img
-                  src="./images/portfolio-1.jpg"
-                  alt="візуалізація сайту Текнокряк"
-                  width="370"
-                  height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-1.jpg    1x,
+                        ./images/portfolio-1-2x.jpeg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-1-tab.jpeg    1x,
+                        ./images/portfolio-1-tab-2x.jpeg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-1-mob.jpg    1x,
+                        ./images/portfolio-1-mob-2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/our-team-4-mob.jpg"
+                      alt="візуалізація сайту Текнокряк"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <p class="card-list__text-hover">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. 
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                 </div>
@@ -126,6 +149,7 @@
                 class="card-list__link link"
               >
                 <div class="card-list__content">
+                  
                   <img
                     src="./images/portfolio-3.jpg"
                     alt="логоти для додатку рибного ресторану"
