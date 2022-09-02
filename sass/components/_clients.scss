@@ -1,9 +1,15 @@
 .logo-list {
-  @include flex(flex, center, null, 30px);
+  @include flex-wrap (flex, wrap, 30px);
 
     &__items { 
-      width: 170px;
+      width: calc((100% - 30px) / 2);
       height: 92px;
+      @include tablet {
+        width: calc((100% - 60px) / 3);
+      } 
+      @include desktop {
+        width: calc((100% - 150px) / 6);
+      }
     }
     &__link { 
       @include flex(flex, center, center, null);

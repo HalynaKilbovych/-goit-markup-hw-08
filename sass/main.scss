@@ -1,9 +1,11 @@
+
 @import './base/reset';
+@import './utils/mixin';
 @import './base/global'; 
 
 @import './utils/variables';
 @import './utils/hidden';
-@import './utils/mixin';
+
 
 @import './components/header';
 @import './components/hero';

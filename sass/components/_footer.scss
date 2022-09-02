@@ -1,34 +1,75 @@
 .footer {
-    background-color: #2f303a;
-    padding: 60px 0;
+  background-color: #2f303a;
+  padding: 60px 0;
     &__container { 
-      @include flex(flex, baseline, null, null);
+      @include flex (flex, center, center, null);
+      flex-direction: column;
+      
+      @media screen and (max-width: 1200px) {
+        gap: 60px;
+      }
+      @media screen and (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
+      }
+      @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
     }
     &__wrapper-address { 
-      margin-right: 70px;
-      flex-grow: 1;
-    }
+      @include flex (flex, center, center, null);
+      flex-direction: column;
+      gap: 20px;
+      @media screen and (min-width: 1200px) {
+        align-items: baseline;
+        margin-right: 70px;
+      }
+      }
     &__wrapper-social { 
-      margin-right: 93px;
+      // margin-right: 93px;
+      @include flex (flex, center, center, null);
+      flex-direction: column;
+      @media screen and (min-width: 1200px) {
+        align-items: baseline;
+        margin-right: 93px;
+      }
     }
     &__wrapper-form { 
-      margin-left: auto;
+      // margin-left: auto;
+      @media screen and (min-width: 320px) and (max-width: 1200px) {
+        width: 100%;
+      }
+      @media screen and (min-width: 1200px) {
+        margin-left: auto;
+      }
     }
     &__address{
-      margin-top: 20px;
+      text-align: center;
+      padding-left: 15px;
+      padding-right: 15px;
+      @media screen and (min-width: 1200px) {
+        text-align: left;
+        padding-left: 0;
+      }
     }
     &__subtitle { 
     margin-bottom: 20px;
     @include fonts(700, 14px, 16px, 0.03em);
     text-transform: uppercase;
-    color: var(--secondary-header-color); 
+    text-align: center;
+    color: var(--secondary-header-color);
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+     } 
     }
     &__media-link { 
       background-color: rgba(255, 255, 255, 0.1);
       color: var(--secondary-header-color);
     }
-  }
-
+}
 .address { 
   &__item:not(:last-child) { 
     margin-bottom: 9px;
@@ -51,10 +92,18 @@
 
 }
 .form { 
-  @include flex(flex, null, null, 12px);
+  
+  @include flex (flex, center, center, null);
+  flex-direction: column;
+  gap: 20px;
+  @media screen and (min-width: 1200px) {
+    @include flex(flex, null, null, 12px);
+    flex-direction: row;
+  }
+  
   &__input { 
     @include fonts(null, 16px, 20px, 0.03em);
-    width: 358px;
+    width: 100%;
     height: 50px;
     padding: 15px 16px;
     background-color: transparent;
@@ -62,11 +111,17 @@
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     color: rgba(255, 255, 255, 0.6);
+
+    @media screen and (min-width: 768px) { 
+      width: 450px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
   }
   &__button{ 
     @include flex(flex, center, center, 10px);
     width: 200px;
-    margin: 0 auto;
   }
   &__icon { 
     fill: currentColor;
