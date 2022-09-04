@@ -1,5 +1,10 @@
 .filter-list {
-  @include flex (flex, null, center, null);
+  @include flex (flex, null, left, null);
+  flex-wrap: wrap;
+  row-gap: 15px;
+  @include tablet{ 
+    justify-content: center;
+  }
   &__item:not(:last-child) {
     margin-right: 8px;
   }
@@ -21,5 +26,5 @@
   }
 }
 .portfolio__filter-list {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
