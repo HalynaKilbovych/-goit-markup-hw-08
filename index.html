@@ -21,7 +21,7 @@
     <title>Web-Studio</title>
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <a class="logo header__logo logo--black  link" lang="en" href="./index.html"
           ><span class="logo__text">Web</span>Studio</a
@@ -53,8 +53,82 @@
               +38 096 111 11 11</a>
             </li>
         </ul>
-      </div>
-    </header> -->
+        <button type="button" class="mob-menu__open-btn" data-menu-open>
+          <svg class="mob-menu__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu_open"></use>
+          </svg>
+        </button>
+        <!-- is-hidden -->
+        <div class="mob-menu is-hidden" data-menu>
+          
+          <div class="container">
+            <div class="mob-menu__content">
+              <button type="button" class="mob-menu__close-btn" data-menu-close>
+                <svg class="mob-menu__icon" width="40" height="40">
+                  <use href="./images/icons.svg#icon-menu_close"></use>
+                </svg>
+              </button>
+              <nav class="mob-menu__nav">
+                <ul class="mob-menu__navigation list">
+                  <li class="mob-menu__item">
+                    <a class="mob-menu__link link " href="./index.html">Студія</a>
+                  </li>
+                  <li class="mob-menu__item">
+                    <a class="mob-menu__link link" href="./portfolio.html">Портфоліо</a>
+                  </li>
+                  <li class="mob-menu__item"><a class="mob-menu__link link" href="#">Контакти</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="mob-connect">
+              <a href="tel:+380441111111" class="mob-connect__tel link"
+                >+38 044 111 11 11</a>
+              <a class="mob-connect__mail link" lang="en" href="mailto:info@devstudio.com">info@devstudio.com
+                </a>
+              <ul class="mob-connect__list list">
+                  <li class="mob-connect__item">
+                    <a
+                      href=""
+                      class="mob-connect__link link"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      >Instagram</a
+                    >
+                  </li>
+                  <li class="mob-connect__item">
+                    <a
+                      href=""
+                      class="mob-connect__link link"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      >Twitter</a
+                    >
+                  </li>
+                  <li class="mob-connect__item">
+                    <a
+                      href=""
+                      class="mob-connect__link link"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      >Facebook</a
+                    >
+                  </li>
+                  <li class="mob-connect__item">
+                    <a
+                      href=""
+                      class="mob-connect__link link"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      >LinkedIn</a
+                    >
+                  </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+    </header>
 
     <main>
       <section class="hero">
@@ -558,5 +632,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

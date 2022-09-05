@@ -2,7 +2,7 @@
   @include flex (flex, null, left, null);
   gap: var(--gap);
   flex-wrap: wrap;
-  @include tablet{ 
+  @include desktop{ 
     justify-content: center;
   }
     &__item {
@@ -16,6 +16,11 @@
     }
     &__link { 
       transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      @include tablet{ 
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
       &:hover,
       &:focus { 
         display: block;
@@ -25,6 +30,7 @@
     &__content { 
       position: relative;
       overflow: hidden;
+
     }
     &__text-hover { 
       position: absolute;
@@ -50,6 +56,9 @@
       padding: 20px 24px;
       border: 1px solid #eeeeee;
       border-top: 0;
+      @include tablet{ 
+        flex-grow: 1;
+      }
     }
     &__description-title {
       margin-bottom: 4px;

@@ -20,7 +20,7 @@
 }
 
 .modal { 
-  width: 528px;
+  width: calc(100% - 30px); 
   min-height: 581px;
   background-color: var(--primary-background-color);
   border-radius: 4px;
@@ -32,9 +32,12 @@
   &__title { 
     margin-bottom: 12px;
 
-    @include fonts(700, 20px, 23px, 0.03em);
+    @include fonts(700, 20px, 30px, 0.03em);
     text-align: center;
-    color: var(--primary-header-color)
+    color: var(--primary-header-color);
+    @include desktop { 
+      line-height: 23px;
+    }
   }
   &__button-close { 
     position: absolute;
@@ -124,8 +127,12 @@
   }
   &__checkbox-label {
     @include flex (flex, center, center, null);
-    @include fonts(null, 14px, 24px, 0.03em);
+    @include fonts(null, 12px, 14px, 0.03em);
     color: #757575;
+
+    @include desktop { 
+       @include fonts(null, 14px, 24px, 0.03em);
+    }
   }
   &__checkbox-label .checkbox-span{
     @include flex (flex, center, center, null);
@@ -156,4 +163,7 @@
       fill: var(--secondary-header-color);
     }
   }
+}
+.form__button { 
+  margin: 0 auto;
 }
