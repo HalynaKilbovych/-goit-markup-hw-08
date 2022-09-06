@@ -165,6 +165,7 @@
 }
 .mob-connect { 
   padding-left: 40px;
+  padding-bottom: 48px;
 
   &__tel {
     @include fonts (500, 34px, 40px, 0.02em);
