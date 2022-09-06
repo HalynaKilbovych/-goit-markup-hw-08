@@ -21,6 +21,12 @@
 
 .modal { 
   width: calc(100% - 30px); 
+  @include tablet { 
+    width: 450px;
+  }
+  @include desktop { 
+    width: 528px;
+  }
   min-height: 581px;
   background-color: var(--primary-background-color);
   border-radius: 4px;
@@ -122,10 +128,15 @@
         }
   }
   &__checkbox { 
-    @include flex (flex, null, center, null);
+    @include flex (flex, center, center, null);
     margin-bottom: 30px;
   }
   &__checkbox-label {
+    // поставила цю умову щоб гарно виглядало на екранах менше 470 (шрифт 12 ламається саме на 470)
+    @media screen and (max-width: 470px) {
+      flex-wrap: wrap;
+      font-size: 9px
+    }
     @include flex (flex, center, center, null);
     @include fonts(null, 12px, 14px, 0.03em);
     color: #757575;

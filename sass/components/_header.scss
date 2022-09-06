@@ -20,7 +20,10 @@
 .logo { 
   font-family: 'Raleway', sans-serif;
   @include fonts(null, 24px, 28px, 0.03em);
-
+  @media screen and (max-width:767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
   @include desktop { 
     @include fonts(null, 26px, 31px, 0.03em);
   }
@@ -123,11 +126,13 @@
   &__nav { 
     padding-left: 40px;
   }
+  &__close-btn { 
+    margin-top: 10px;
+  }
   &__close-btn, 
   &__open-btn  {
     display: block;
     margin-left: auto;
-    margin-top: 10px;
     background-color: var(--secondary-header-color);
     border: none;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);

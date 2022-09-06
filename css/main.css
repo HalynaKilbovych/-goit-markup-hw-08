@@ -156,6 +156,12 @@ img {
   line-height: 1.1666666667;
   letter-spacing: 0.03em;
 }
+@media screen and (max-width: 767px) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .logo {
     font-size: 26px;
@@ -287,10 +293,12 @@ img {
 .mob-menu__nav {
   padding-left: 40px;
 }
+.mob-menu__close-btn {
+  margin-top: 10px;
+}
 .mob-menu__close-btn, .mob-menu__open-btn {
   display: block;
   margin-left: auto;
-  margin-top: 10px;
   background-color: var(--secondary-header-color);
   border: none;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -803,6 +811,16 @@ img {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
+}
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
 }
@@ -919,6 +937,7 @@ img {
 }
 .forms__checkbox {
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-bottom: 30px;
 }
@@ -930,6 +949,12 @@ img {
   line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: #757575;
+}
+@media screen and (max-width: 470px) {
+  .forms__checkbox-label {
+    flex-wrap: wrap;
+    font-size: 9px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .forms__checkbox-label {
